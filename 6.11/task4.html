@@ -9,13 +9,21 @@
 <body>
     
 <script>
-    let s= 0,i = 1;
+     let s= 0,i = 1;
     while (s<=100)
-    {   s+=i;
-        i++;
+    {  
+         s+=i; //sum=sum+i
+         i++;
     
+
+       if(s<=100){
         document.write(s + "<br/>")
-    }
+       }
+       else 
+        break;
+    
+       }
+    
     </script>
     
 </body>
