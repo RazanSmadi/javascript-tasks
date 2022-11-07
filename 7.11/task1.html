@@ -9,23 +9,12 @@
 <body>
     
 <script>
-
-    let s= 0,i = 1;
-    while (s<=100)
-    {  
-         s+=i; //sum=sum+i
-         i++;
-    
-
-       if(s<=100){
-        document.write(s + "<br/>")
-       }
-       else 
-        break;
-    
-       }
-    
-    
+    function lastOfArray(arr)
+    {
+      return arr[arr.length-1];
+    }
+    let s=lastOfArray(["t","u","g","x"])
+    document.write(s);
     </script>
     
 </body>

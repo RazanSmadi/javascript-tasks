@@ -8,25 +8,15 @@
 </head>
 <body>
     
-<script>
-
-    let s= 0,i = 1;
-    while (s<=100)
-    {  
-         s+=i; //sum=sum+i
-         i++;
     
-
-       if(s<=100){
-        document.write(s + "<br/>")
-       }
-       else 
-        break;
-    
-       }
-    
-    
+    <script>
+    function isodd(num)
+        {
+            if(num%2 != 0)
+            return true;
+            else return false;
+        }
+        document.write(isodd(7));
     </script>
-    
 </body>
 </html>

@@ -9,22 +9,16 @@
 <body>
     
 <script>
+    function largNum(x,y) {
+        if(x>y)
+        {return x;}
+        else{
+      return y;}
+    }
+let x=prompt("inter first num");
+let y=prompt("inter second num");
 
-    let s= 0,i = 1;
-    while (s<=100)
-    {  
-         s+=i; //sum=sum+i
-         i++;
-    
-
-       if(s<=100){
-        document.write(s + "<br/>")
-       }
-       else 
-        break;
-    
-       }
-    
+    document.write("the two numbers are: " + x + "and " + y + ", and the largest number is "+largNum(x,y));
     
     </script>
     
