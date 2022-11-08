@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function change() {
+    var x= document.getElementById("country").value;
+    if(x=="norway"){
+        document.getElementById("pic").src="norway.gif";
+        
+    }
+    else if(x=="jordan"){
+        document.getElementById("pic").src="jordan.jfif";
+        
+    }
+    else if(x=="egypt"){
+        document.getElementById("pic").src="egypt.jfif";
+        
+    }
+    else if(x=="algeria"){
+        document.getElementById("pic").src="algeria.jfif";
+        
+    }
+}
+    </script>
+
+<form>
+    <select id = "country" name = "country" onchange="change()">
+       <option value = "norway" id="norway">norway</option>
+       <option value = "jordan" id="jordan">Jordan</option>
+       <option value = "egypt" id="egypt">Egypt</option>
+       <option value = "algeria" id="algeria">algeria</option>
+    </select>
+    </form>
+<br>
+    <img src="norway.gif" alt="pic" id="pic" style="width:400px ; height :300px;"  >
+
+
+</body>
+</html>

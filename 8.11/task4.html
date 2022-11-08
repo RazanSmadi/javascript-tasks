@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<body>
+Password(min 6 characters) <input type="password" id="password" onchange="pass()" > <span class="jana"></span><br><br>
+Repeat Password <input type="password" id="Repeat" onchange="rep()" style="margin-left:4.2rem;"> <span class="jana"></span><br>
+<input type="submit" value="Submit" id="button" style="display: none;" > 
+<script>
+
+function pass(){
+let pass= document.getElementById("password").value;
+if(pass.length<6){document.getElementsByClassName("jana")[0].innerHTML="Too Short";}
+else{document.getElementsByClassName("jana")[0].innerHTML="";
+     document.getElementById("Repeat").removeAttribute("disabled"); }
+}
+
+
+function rep(){
+let pass=document.getElementById("password").value;
+let rep=document.getElementById("Repeat").value;
+if(pass != rep)  {document.getElementsByClassName("jana")[1].innerHTML="Passwords doesn't match"; }
+else { 
+confirmflag=true; document.getElementsByClassName("jana")[1].innerHTML="";  
+document.getElementById("button").style.display="block";
+} 
+
+}
+</script>
+</body>
+</html>

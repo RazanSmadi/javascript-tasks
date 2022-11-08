@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" id="form" onchange="jana()">
+        <select name="" id="font_family">
+            <option value="Arial " selected >Arial </option>
+            <option value="Times New Roman">Times New Roman </option>
+            <option value="sans-serif">sans-serif</option>
+        </select>
+        <select name="" id="font_Size">
+            <option value="12pt" selected >12pt</option>
+            <option value="22pt">22pt </option>
+            <option value="32pt">32pt</option>
+        </select>
+        <label for="Italic"> Italic</label>
+        <input type="checkbox" id="Italic" name="ita" value="ita">
+        <label for="Bold"> Bold</label>
+        <input type="checkbox" id="Bold" name="bold" value="bold">
+        <label for="Underline"> Underline</label>
+        <input type="checkbox" id="Underline" name="Underline" value="Underline">
+        
+       <br>
+        <textarea name="" id="text" cols="50" rows="5" style="font-size:18px; ">The quick brown fox jumps over the lazy dog</textarea>
+        <br>
+    </form>
+<script>
+
+function jana(){
+    var x=document.getElementById("font_family");
+switch(x){
+    case "Arial":{
+        document.getElementById("text").style.fontFamily=x.value;
+        break;}
+    case "Times New Roman":{
+        document.getElementById("text").style.fontFamily=x.value;
+        break;}
+    case "sans-serif":{
+        document.getElementById("text").style.fontFamily=x.value;
+        break;}
+    default :  document.getElementById("text").style.fontFamily=x.value;
+}
+        var y =document.getElementById("font_Size").value;
+switch(y){
+    case "12pt":{
+        document.getElementById("text").style.fontSize="12pt";
+        break;}
+    case "22pt":{
+        document.getElementById("text").style.fontSize="22pt";
+        break;}
+    case "32pt":{
+        document.getElementById("text").style.fontSize="32pt";
+        break;}
+     default :  document.getElementById("text").style.fontSize="30pt";
+
+}
+
+var z=document.getElementById("Bold");
+if(z.checked){ document.getElementById("text").style.fontWeight="bold";}
+
+var zz=document.getElementById("Italic");
+if(zz.checked){document.getElementById("text").style.fontStyle ="italic";}
+
+var zzz=document.getElementById("Underline");
+if(zzz.checked){document.getElementById("text").style.textDecoration="underline";}
+
+
+}
+</script>
+</body>
+</html>
