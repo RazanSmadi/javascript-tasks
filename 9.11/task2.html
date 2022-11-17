@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,4 +108,114 @@ document.getElementById("pro").innerHTML+=Language;
 </script>
 </form>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<form action="">
+<label>SUBJECT</label>
+<input type="text" id="name" name="name"><br>
+<!-- 
+<label >Age:</label>
+<input type="text" id="age" name="age"><br> -->
+<label>Usertype</label>
+<input type="radio" id="female" name="female" value="female">
+<label>x</label>
+<input type="radio" id="male" name="male" value="male">
+<label>y</label><br>
+
+<textarea id="briefDescription" name="briefDescription" rows="4" cols="30"></textarea><br>
+<label>Technology used </label>
+<input type="checkbox" id="c++" name="c++" value="c++">
+<label > c++</label>
+<input type="checkbox" id="java" name="java" value="java">
+<label > java</label>
+<input type="checkbox" id="c#" name="c#" value="c#">
+<label > c#</label>
+
+<br><br>
+</form>
+
+<input type="submit" value="Submit" onclick="myFunction()">
+
+<div id="card" style="display: none;" >
+    <labe> SUBJECT:</labe>
+    <span id="name1"></span><br>
+    <labe> USERTYPE:</labe>
+    <span id="gen"></span><br>
+    <labe> Description:</labe>
+    <span id="desc"></span><br>
+    <labe> Technology USED </labe>
+    <span id="pro"></span><br>
+</div>
+
+<script>
+sessionStorage.clear();
+function myFunction(){
+
+
+var name =document.getElementById("name").value;
+sessionStorage.setItem("name!",name);
+
+
+
+var gender="";
+if(document.getElementById("female").checked)
+gender+=document.getElementById("female").value;
+if(document.getElementById("male").checked)
+gender+=document.getElementById("male").value;
+sessionStorage.setItem("gender",gender);
+
+
+var brief=document.getElementById("briefDescription").value;
+sessionStorage.setItem("briefDescription",brief);
+    
+    
+
+var Language="";
+if (document.getElementById("c++").checked)
+Language+=document.getElementById("c++").value;
+if(document.getElementById("java").checked)
+Language+=document.getElementById("java").value;
+if(document.getElementById("c#").checked)
+Language+=document.getElementById("c#").value;
+sessionStorage.setItem("language",Language);
+
+
+document.getElementById('card').style.display="block";
+document.getElementById('card').style.border="3px solid black";
+document.getElementById('card').style.background="pink";
+document.getElementById('card').style.width="300px";
+
+
+sessionStorage.getItem('name');
+document.getElementById("name1").innerHTML+=name;
+
+
+
+sessionStorage.getItem('gender');
+document.getElementById("gen").innerHTML+=gender;
+
+
+sessionStorage.getItem('brief');
+document.getElementById("desc").innerHTML+=brief;
+
+
+sessionStorage.getItem('language');
+document.getElementById("pro").innerHTML+=Language;
+
+}
+</script>
+</form>
+</body>
+>>>>>>> 4859ea65958a4d4a8cc36fd0f7c375c7d8c11ef0
 </html>

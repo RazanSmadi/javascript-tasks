@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,4 +124,131 @@ document.getElementById("pro").innerHTML+=Language;
 </script>
 </form>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<form action="">
+<label> Name:</label>
+<input type="text" id="name" name="name"><br>
+
+<label >Age:</label>
+<input type="text" id="age" name="age"><br>
+
+<input type="radio" id="female" name="female" value="female">
+<label>Female</label><br>
+<input type="radio" id="male" name="male" value="male">
+<label>Male</label><br>
+
+<textarea id="briefDescription" name="briefDescription" rows="4" cols="30"></textarea><br>
+
+<label>Your Major</label>
+<input type="text" id="major" name="major"><br>
+
+<input type="checkbox" id="c++" name="c++" value="c++">
+<label > c++</label><br>
+<input type="checkbox" id="java" name="java" value="java">
+<label > java</label><br>
+<input type="checkbox" id="c#" name="c#" value="c#">
+<label > c#</label>
+
+<br><br>
+</form>
+
+<input type="submit" value="Submit" onclick="myFunction()">
+
+<div id="card" style="display: none;" >
+    <labe> Name :</labe>
+    <span id="name1"></span><br>
+    <labe> Age :</labe>
+    <span id="age1"></span><br>
+    <labe> Gender:</labe>
+    <span id="gen"></span><br>
+    <labe> Brief Description:</labe>
+    <span id="desc"></span><br>
+    <labe> Major:</labe>
+    <span id="major1"></span><br>
+    <labe> Programming Language: </labe>
+    <span id="pro"></span><br>
+</div>
+
+<script>
+localStorage.clear();
+function myFunction(){
+
+
+var name =document.getElementById("name").value;
+localStorage.setItem("name!",name);
+
+var age=document.getElementById("age").value;
+localStorage.setItem("age!",age);
+
+
+var gender="";
+if(document.getElementById("female").checked)
+gender+=document.getElementById("female").value;
+if(document.getElementById("male").checked)
+gender+=document.getElementById("male").value;
+localStorage.setItem("gender",gender);
+
+
+var brief=document.getElementById("briefDescription").value;
+localStorage.setItem("briefDescription",brief);
+    
+var major=document.getElementById("major").value;
+localStorage.setItem("major",major);
+    
+
+var Language="";
+if (document.getElementById("c++").checked)
+Language+=document.getElementById("c++").value;
+if(document.getElementById("java").checked)
+Language+=document.getElementById("java").value;
+if(document.getElementById("c#").checked)
+Language+=document.getElementById("c#").value;
+localStorage.setItem("language",Language);
+
+
+document.getElementById('card').style.display="block";
+document.getElementById('card').style.border="3px solid black";
+document.getElementById('card').style.background="pink";
+document.getElementById('card').style.width="300px";
+
+
+localStorage.getItem('name');
+document.getElementById("name1").innerHTML+=name;
+
+
+localStorage.getItem('age');
+document.getElementById("age1").innerHTML+=age;
+
+
+localStorage.getItem('gender');
+document.getElementById("gen").innerHTML+=gender;
+
+
+localStorage.getItem('brief');
+document.getElementById("desc").innerHTML+=brief;
+
+
+localStorage.getItem('major');
+document.getElementById("major1").innerHTML+=major;
+
+localStorage.getItem('language');
+document.getElementById("pro").innerHTML+=Language;
+
+}
+</script>
+</form>
+</body>
+>>>>>>> 4859ea65958a4d4a8cc36fd0f7c375c7d8c11ef0
 </html>
